@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "Mini Books API",
+    "_postman_id": "b0b6cb27-07a3-4f7f-9b83-111111111111",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "List Books",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/books"
+      }
+    },
+    {
+      "name": "Search Books (q=deep)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/books?q=deep"
+      }
+    },
+    {
+      "name": "Create Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Mi libro de IA\",\n  \"author\": \"Tu Nombre\",\n  \"year\": 2025,\n  \"rating\": 4.2\n}"
+        },
+        "url": "{{baseUrl}}/books"
+      }
+    },
+    {
+      "name": "Get Book (id=1)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/books/1"
+      }
+    },
+    {
+      "name": "Update Book (id=1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"rating\": 4.9}"
+        },
+        "url": "{{baseUrl}}/books/1"
+      }
+    },
+    {
+      "name": "Delete Book (id=1)",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/books/1"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    }
+  ]
+}
