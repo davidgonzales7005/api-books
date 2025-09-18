@@ -3,7 +3,7 @@ const cors = require('cors');
 const Database = require('better-sqlite3');
 
 // Config
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8017;
 const DB_PATH = process.env.DB_PATH || './books.sqlite';
 
 // DB + schema
